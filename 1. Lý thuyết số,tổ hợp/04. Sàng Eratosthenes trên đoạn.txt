@@ -1,0 +1,23 @@
+Đôi khi bạn phải tìm tất cả các số không phải trên đoạn [1;N]
+mà là trên đoạn [L;R] với R lớn.
+
+Điều kiện sử dụng phương pháp này là bạn có thể tạo mảng độ dài R−L+1 phần tử.
+
+vector<bool> isPrime(R - L + 1, true);  // x là số nguyên tố khi và chỉ khi isPrime[x - l] == true
+
+for (long long i = 2; i * i <= R; ++i) {
+	// (L + i - 1) / i * i là BCNN >= j
+    for (long long j = max(i * i, (L + i - 1) / i * i); j <= R; j += i) {
+        isPrime[j - L] = false;
+    }
+}
+
+if (1 >= L) {  // Xét riêng trường hợp số 1
+    isPrime[1 - L] = false;
+}
+
+for (long long x = L; x <= R; ++x) {
+    if (isPrime[x - L]) {
+        // i là số nguyên tố
+    }
+}

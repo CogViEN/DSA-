@@ -1,0 +1,2 @@
+duyệt từ sqrt(a) -> sqrt(b)
+rôi bình phương số đó lên mà thuộc đoạn từ [a, b] thì đó là số chính phương

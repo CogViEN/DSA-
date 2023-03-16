@@ -1,0 +1,10 @@
+Tính (a^b) % c
+Xét bài toán tính a^b%c, với % là dấu đồng dư thức và b có thể rất lớn (ví dụ b ≤ 10^18).
+
+ll c = 1e9+7; // c không cố định
+ll binPow(ll a, ll b){
+	if(b == 0) return 1;
+	int x = binPow(a, b/2);
+	if(b % 2 != 0) return ((((x%c) % (x%c)) % c) * (a%c)) % c;
+	else return ((x%c) % (x%c)) % c;
+}

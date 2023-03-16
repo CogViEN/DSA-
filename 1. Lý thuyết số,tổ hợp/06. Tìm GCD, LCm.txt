@@ -1,0 +1,12 @@
+  Áp dụng thuật toán eculid:
+- Thuật toán Euclid dựa trên tính chất sau của ước chung lớn nhất GCD(A,B)=GCD(B,A%B)
+- Thuật toán sẽ quy nạp cho đến khi A%B=0
+
+int gcd(int A, int B) {
+    if (B == 0) return A;
+    else return gcd(B, A % B);
+}
+
+int lcm(int a,int b){
+	return a*b/gcd(a,b);
+}

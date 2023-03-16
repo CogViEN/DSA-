@@ -1,0 +1,6 @@
+Làm đồng dư khi muốn cộng, trừ, nhân khi 2 số cần xử lí
+vượt khỏi long long
+
+(a+b)%c=(a%c+b%c)%c
+(a-b)%c=(a%c-b%c)%c
+(a.b)%c=((a%c).(b%c))%c

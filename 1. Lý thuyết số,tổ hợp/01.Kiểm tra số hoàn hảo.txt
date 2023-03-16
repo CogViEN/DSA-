@@ -1,0 +1,8 @@
+số hoàn hảo là số có tổng các ước bằng chính nó
+Np = 2^(p-1) * (2^p - 1);
+
+Np: là số hoàn hảo
+p: là số nguyên tố
+
+Bài toán tìm số hoàn hảo trong khoảng 32bit int
+thì cho chạy từ 2 đến 31

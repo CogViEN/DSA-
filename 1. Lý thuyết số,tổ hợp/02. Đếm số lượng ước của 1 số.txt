@@ -1,0 +1,21 @@
+n = p1^e1 * p2^e2 * ... * pn^en
+
+Số lượng ước của n: (e1+1)*(e2+1)*...*(en+1)
+
+Vd: 60 = 2^2 * 3^1 * 5^1
+	số lượng ước bằng 3 * 2 * 2 = 12
+
+code mẫu: 
+
+int SLU(int n){
+	int res = 1;
+	for(int i = 2; i <= n; i++){
+		int tmp = 0;
+		while(n % i == 0){
+			tmp++;
+			n /= i;
+		}
+		if(tmp) res *= (tmp+1);
+	}
+	return res;
+}
